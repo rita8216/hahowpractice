@@ -1,0 +1,27 @@
+#app
+  .banner
+    .center_banner
+      img(src="https://2017.awiclass.monoame.com/img/hahow_progress.png")
+  .classes
+    .classbox(v-for="cls in classes")
+      .teacher(v-bind:style="'background-image:url('+cls.owner.profileImageUrl+')'")
+      .top
+        .classpic(v-bind:style="'background-image:url('+cls.coverImage.url+')'")
+        .tag 募資中
+        .bookicon 
+          i.fa.fa-bookmark-o
+      .bottom
+        .title {{cls.title}}
+        .text
+          .preprice 預購價 
+            span.orange NT${{cls.preOrderedPrice}}
+          .lastday(v-if="parseInt((new Date(cls.proposalDueTime)-new Date('2016/10/14'))/1000/60/60/24)>=0") 剩 
+            span.orange {{parseInt((new Date(cls.proposalDueTime)-new Date('2016/10/14'))/1000/60/60/24)}}天
+          .lastday(v-if="parseInt((new Date(cls.proposalDueTime)-new Date('2016/10/14'))/1000/60/60/24)<0") 
+            span.orange 募資已結束
+            //顯示的時間為毫秒 parseInt轉換為整數
+          .progressbar
+            .valuebar(v-bind:style="'width:'+100*cls.numSoldTickets/cls.successCriteria.numSoldTickets+'%'")
+          .nowpeople 已募資
+            span.orange  {{cls.numSoldTickets}}/{{cls.successCriteria.numSoldTickets}}人
+      .color-bar

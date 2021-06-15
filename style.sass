@@ -1,0 +1,158 @@
+$color_orange: #FA8B00
+$color_grey: #f3f3f1
+$color_dark_orange: #EB5E00
+$color_yellow: #FFE18D
+$color_dark_yellow: #FFDA71
+$color_dark_grey: #4F4C4B
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+*
+  // border: solid 1px black
+  position: relative
+body,html
+  padding: 0
+  margin: 0
+  +size(100%,100%)
+  background-color: $color_grey
+  font-family: "微軟正黑體"
+.classes
+  max-width: 1000px
+  margin-left: auto
+  margin-right: auto
+  // margin-left: 50px
+  width: 90%
+  
+.classbox
+  width: 260px
+  border-radius: 5px
+  background-color: white
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2) 
+  display: inline-block
+  margin: 40px 20px
+  vertical-align: top
+  &:hover
+    .top .classpic
+        transform: scale(1.2)
+    .top .bookicon
+        bottom: 15px
+      
+  .teacher
+    +size(55px,55px)
+    border-radius: 50%
+    position: absolute
+    top: -23px
+    left: 20px
+    background-image: url("https://scontent.ftpe2-2.fna.fbcdn.net/v/t1.18169-9/11011102_10200576191324879_4517344640193864848_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=174925&_nc_ohc=qnAG9wxQdHAAX_aEDHD&_nc_ht=scontent.ftpe2-2.fna&oh=17203849fcd815ac157f82ad12897aae&oe=60DC3796")
+    background-size: cover
+    border: solid 2px white
+    z-index: 5
+  .top
+    height: 160px
+    overflow: hidden
+    .classpic
+      +size(100%,100%)
+      background-image: url("https://scontent.ftpe2-1.fna.fbcdn.net/v/t31.18172-8/1404461_3582641342323_1526709582_o.jpg?_nc_cat=100&ccb=1-3&_nc_sid=e3f864&_nc_ohc=bNWTIYpc_ewAX8JHJ5l&_nc_ht=scontent.ftpe2-1.fna&oh=2610c044a47561603caa5c3113bedc1b&oe=60DDD78D")
+      background-size: cover
+      position: absolute
+      transition: 0.5s
+    .tag
+      +size(100%,30px)
+      text-align: center
+      transform: translate(90px,20px)rotate(45deg)
+      line-height: 30px
+      background-color: $color_dark_orange
+      color: white
+    .bookicon
+      +size(42px,42px)
+      position: absolute
+      bottom: -50px
+      left: 15px
+      border-radius: 50%
+      background-color: white
+      transition: bottom 0.5s
+      
+      &:hover
+        background-color: $color_dark_orange
+        i
+          color: white
+      i
+        position: absolute
+        left:50%
+        top:50%
+        transform: translate(-50%,-50%)
+        font-size: 22px
+        color: $color_dark_orange
+  .bottom
+    height: 184px
+    padding: 15px
+    .title
+      font-size: 25px
+      color: $color_dark_grey
+    .text
+      font-size: 15px
+      margin-top: 10px
+      .preprice
+        display: inline-block
+      .lastday
+        position: absolute
+        right: 0px
+        display: inline-block
+      .progressbar
+        +size(100%,10px)
+        background-color: rgba(0,0,0,0.1)
+        border-radius: 5px
+        margin: 10px 0px
+        overflow: hidden
+        .valuebar
+          +size(50%,100%)
+          background-color: $color_orange
+          border-radius: 5px 0px 0px 5px
+      .nowpeople
+        text-align: center
+  .color-bar
+    +size(100%,5px)
+    background-color: $color_dark_orange
+    border-radius: 0px 0px 5px 5px
+  .orange
+    color: $color_orange
+.banner
+  height: 400px
+  background: linear-gradient(-45deg,$color_yellow 25%,$color_dark_yellow 25%,$color_dark_yellow 50%,$color_yellow 50%,$color_yellow 75%,$color_dark_yellow 75%,$color_dark_yellow 100%)
+  background-size: 45px 45px
+  position: relative
+  .center_banner
+    display: inline-block
+    background-color: #fff
+    padding: 20px 30px
+    border-radius: 5px
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.3)
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    img
+      width: 100%
+      max-width: 1000px
+      
+
+
+
+
+//   .center_banner
+//     padding: 0
+//     margin: 0
+//     position: absolute
+//     left: 50%
+//     top: 50%
+//     transform: translate(-50%,-50%)
+//     width: 90%
+//     img
+//       width: 100%
+//       max-width: 900px
+
+  
+
+
+

@@ -1,0 +1,161 @@
+@charset "UTF-8";
+* {
+  position: relative;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f1;
+  font-family: "微軟正黑體";
+}
+
+.classes {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.classbox {
+  width: 260px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin: 40px 20px;
+  vertical-align: top;
+}
+.classbox:hover .top .classpic {
+  transform: scale(1.2);
+}
+.classbox:hover .top .bookicon {
+  bottom: 15px;
+}
+.classbox .teacher {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: absolute;
+  top: -23px;
+  left: 20px;
+  background-image: url("https://scontent.ftpe2-2.fna.fbcdn.net/v/t1.18169-9/11011102_10200576191324879_4517344640193864848_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=174925&_nc_ohc=qnAG9wxQdHAAX_aEDHD&_nc_ht=scontent.ftpe2-2.fna&oh=17203849fcd815ac157f82ad12897aae&oe=60DC3796");
+  background-size: cover;
+  border: solid 2px white;
+  z-index: 5;
+}
+.classbox .top {
+  height: 160px;
+  overflow: hidden;
+}
+.classbox .top .classpic {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://scontent.ftpe2-1.fna.fbcdn.net/v/t31.18172-8/1404461_3582641342323_1526709582_o.jpg?_nc_cat=100&ccb=1-3&_nc_sid=e3f864&_nc_ohc=bNWTIYpc_ewAX8JHJ5l&_nc_ht=scontent.ftpe2-1.fna&oh=2610c044a47561603caa5c3113bedc1b&oe=60DDD78D");
+  background-size: cover;
+  position: absolute;
+  transition: 0.5s;
+}
+.classbox .top .tag {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  transform: translate(90px, 20px) rotate(45deg);
+  line-height: 30px;
+  background-color: #EB5E00;
+  color: white;
+}
+.classbox .top .bookicon {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  bottom: -50px;
+  left: 15px;
+  border-radius: 50%;
+  background-color: white;
+  transition: bottom 0.5s;
+}
+.classbox .top .bookicon:hover {
+  background-color: #EB5E00;
+}
+.classbox .top .bookicon:hover i {
+  color: white;
+}
+.classbox .top .bookicon i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  color: #EB5E00;
+}
+.classbox .bottom {
+  height: 184px;
+  padding: 15px;
+}
+.classbox .bottom .title {
+  font-size: 25px;
+  color: #4F4C4B;
+}
+.classbox .bottom .text {
+  font-size: 15px;
+  margin-top: 10px;
+}
+.classbox .bottom .text .preprice {
+  display: inline-block;
+}
+.classbox .bottom .text .lastday {
+  position: absolute;
+  right: 0px;
+  display: inline-block;
+}
+.classbox .bottom .text .progressbar {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 10px 0px;
+  overflow: hidden;
+}
+.classbox .bottom .text .progressbar .valuebar {
+  width: 50%;
+  height: 100%;
+  background-color: #FA8B00;
+  border-radius: 5px 0px 0px 5px;
+}
+.classbox .bottom .text .nowpeople {
+  text-align: center;
+}
+.classbox .color-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #EB5E00;
+  border-radius: 0px 0px 5px 5px;
+}
+.classbox .orange {
+  color: #FA8B00;
+}
+
+.banner {
+  height: 400px;
+  background: linear-gradient(-45deg, #FFE18D 25%, #FFDA71 25%, #FFDA71 50%, #FFE18D 50%, #FFE18D 75%, #FFDA71 75%, #FFDA71 100%);
+  background-size: 45px 45px;
+  position: relative;
+}
+.banner .center_banner {
+  display: inline-block;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner .center_banner img {
+  width: 100%;
+  max-width: 1000px;
+}
